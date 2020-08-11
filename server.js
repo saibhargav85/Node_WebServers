@@ -38,19 +38,25 @@ app.get('/', (req, res) => {
     res.render('home.hbs', {
         name: 'Sai',
         pageTitle: 'Home Page'
-    })
+    });
 });
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         name: 'Sai',
         pageTitle: 'About Page'
-    })
-})
+    });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
+    });
+});
 
 app.get('/help', (req, res) => {
     res.render('help.html')
-})
+});
 
 app.listen(port, () => {
     console.log(`app is running at port ${port} on:`)
